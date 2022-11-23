@@ -1,2 +1,1 @@
-datumok=[]
 homersekletek=[]
