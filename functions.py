@@ -31,3 +31,17 @@ def printAllTemps():
     for key,value in homersekletek.items():
         print(f'{key} - {value}°C')
     input('tovább...')
+
+def addNewTemp():
+    system('cls')
+    print('Új nap:\n')
+    nap=input('Adja meg a dátumot [hónap.nap]: ')
+    temp=int(input('A nap átlaghőmérséklete: '))
+    homersekletek[nap]=temp
+    saveTempToFile(nap,temp)
+    input('Adat sikeresen felvéve. Tovább...')
+
+def saveTempToFile(nap,temp):
+    file=open(filename,'a', encoding='utf-8')
+    file.write(f'\n{nap};{temp}')
+    file.close()

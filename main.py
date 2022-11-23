@@ -8,7 +8,7 @@ while choice!='0':
     if choice=='1':
         printAllTemps()
     elif choice=='2':
-        pass
+        addNewTemp()
     elif choice=='3':
         pass
     elif choice=='4':
