@@ -55,7 +55,7 @@ def deleteTemp():
         saveAllToFile()
         input('A megadott dátum adatai törölve. Tovább...')
     else:
-        print('Erre a dátumra nincs adat megadva. Tovább...')
+        input('Erre a dátumra nincs adat megadva. Tovább...')
         
 def saveAllToFile():
     file=open(filename, 'w', encoding='utf-8')
@@ -63,3 +63,11 @@ def saveAllToFile():
     for key,value in homersekletek.items():
         file.write(f'\n{key};{value}')
     file.close()
+    
+def averageTemp():
+    system('cls')
+    print('A napok átlaghőmérséklete\n')
+    osszeg=sum(homersekletek.values())
+    print(f'{len(homersekletek)} napnak átlaghőmérséklete: {osszeg/len(homersekletek)}°C')
+    input('Tovább...')
+    

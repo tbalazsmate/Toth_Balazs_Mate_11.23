@@ -12,7 +12,7 @@ while choice!='0':
     elif choice=='3':
         deleteTemp()
     elif choice=='4':
-        pass
+        averageTemp()
     elif choice=='5':
         pass
     elif choice=='6':
