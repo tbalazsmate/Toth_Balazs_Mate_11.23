@@ -71,3 +71,10 @@ def averageTemp():
     print(f'{len(homersekletek)} napnak átlaghőmérséklete: {osszeg/len(homersekletek)}°C')
     input('Tovább...')
     
+def hottestDay():
+    system('cls')
+    print('A legmelegebb nap\n')
+    max_value=max(homersekletek.values())
+    max_key=[key for key, value in homersekletek.items() if value == max(homersekletek.values())]
+    print(f'A legmelegebb nap/napok: {max_key}. \n E napi átlaghőmérséklet: {max_value}')
+    input('Tovább...')

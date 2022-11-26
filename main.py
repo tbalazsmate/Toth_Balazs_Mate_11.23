@@ -14,6 +14,6 @@ while choice!='0':
     elif choice=='4':
         averageTemp()
     elif choice=='5':
-        pass
+        hottestDay()
     elif choice=='6':
         pass
