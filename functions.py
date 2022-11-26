@@ -14,6 +14,7 @@ def menu():
     print('4 - Átlag hőmérséklet')
     print('5 - Legmelegebb nap')
     print('6 - Leghidegebb nap')
+    print('6 - Átváltás Kelvinbe')
     return input('Kérem válasszon: ')
 
 def loadTemp():
@@ -73,8 +74,16 @@ def averageTemp():
     
 def hottestDay():
     system('cls')
-    print('A legmelegebb nap\n')
+    print('A legmelegebb napok\n')
     max_value=max(homersekletek.values())
     max_key=[key for key, value in homersekletek.items() if value == max(homersekletek.values())]
     print(f'A legmelegebb nap/napok: {max_key}. \n E napi átlaghőmérséklet: {max_value}')
+    input('Tovább...')
+    
+def coldestDay():
+    system('cls')
+    print('A leghidegebb napok\n')
+    min_value=min(homersekletek.values())
+    min_key=[key for key, value in homersekletek.items() if value == min(homersekletek.values())]
+    print(f'A legmelegebb nap/napok: {min_key}. \n E napi átlaghőmérséklet: {min_value}')
     input('Tovább...')

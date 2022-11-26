@@ -16,4 +16,6 @@ while choice!='0':
     elif choice=='5':
         hottestDay()
     elif choice=='6':
+        coldestDay()
+    elif choice=='7':
         pass
