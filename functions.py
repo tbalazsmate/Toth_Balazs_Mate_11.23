@@ -45,3 +45,21 @@ def saveTempToFile(nap,temp):
     file=open(filename,'a', encoding='utf-8')
     file.write(f'\n{nap};{temp}')
     file.close()
+    
+def deleteTemp():
+    system('cls')
+    print('Adat törlése\n')
+    nap=input('Adja meg a törlendő adat dátumát [Hónap.Nap]: ')
+    if nap in homersekletek:
+        homersekletek.pop(nap)
+        saveAllToFile()
+        input('A megadott dátum adatai törölve. Tovább...')
+    else:
+        print('Erre a dátumra nincs adat megadva. Tovább...')
+        
+def saveAllToFile():
+    file=open(filename, 'w', encoding='utf-8')
+    file.write(cimsor)
+    for key,value in homersekletek.items():
+        file.write(f'\n{key};{value}')
+    file.close()

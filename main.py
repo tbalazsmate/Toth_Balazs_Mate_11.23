@@ -10,7 +10,7 @@ while choice!='0':
     elif choice=='2':
         addNewTemp()
     elif choice=='3':
-        pass
+        deleteTemp()
     elif choice=='4':
         pass
     elif choice=='5':
