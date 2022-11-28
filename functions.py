@@ -69,7 +69,7 @@ def averageTemp():
     system('cls')
     print('A napok átlaghőmérséklete\n')
     osszeg=sum(homersekletek.values())
-    print(f'{len(homersekletek)} napnak átlaghőmérséklete: {osszeg/len(homersekletek)}°C')
+    print(f'{len(homersekletek)} napnak átlaghőmérséklete: {round(osszeg/len(homersekletek),2)}°C')
     input('Tovább...')
     
 def hottestDay():
@@ -77,7 +77,8 @@ def hottestDay():
     print('A legmelegebb napok\n')
     max_value=max(homersekletek.values())
     max_key=[key for key, value in homersekletek.items() if value == max(homersekletek.values())]
-    print(f'A legmelegebb nap/napok: {max_key}. \n E napi átlaghőmérséklet: {max_value}')
+    max_days=', '.join(max_key)
+    print(f'A legmelegebb nap/napok: {max_days}. \n E napi átlaghőmérséklet: {max_value}')
     input('Tovább...')
     
 def coldestDay():
@@ -85,7 +86,8 @@ def coldestDay():
     print('A leghidegebb napok\n')
     min_value=min(homersekletek.values())
     min_key=[key for key, value in homersekletek.items() if value == min(homersekletek.values())]
-    print(f'A legmelegebb nap/napok: {min_key}. \n E napi átlaghőmérséklet: {min_value}')
+    min_days=', '.join(min_key)
+    print(f'A legmelegebb nap/napok: {min_days}. \n E napi átlaghőmérséklet: {min_value}')
     input('Tovább...')
 
 def tempInKelvin():
