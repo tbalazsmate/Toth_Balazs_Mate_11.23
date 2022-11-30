@@ -95,6 +95,9 @@ def tempInKelvin():
     print('Átváltás Kelvinbe\n')
     nap=input('Melyik napnak hőmérsékletét szertné átváltani? [hónap.nap]: ')
     Celsius=homersekletek.get(nap,'Ez a nap nem található meg az adatbázisban!')
-    print(f'{Celsius}°C az {Celsius+273.15} K')
+    if type(Celsius)==int:
+        print(f'{Celsius}°C az {Celsius+273.15} K')
+    else:
+        print('Ez a nap nem található meg az adatbázisban!')
     input('Tovább...')
     
