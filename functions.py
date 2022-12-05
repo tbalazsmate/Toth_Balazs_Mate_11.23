@@ -50,6 +50,10 @@ def saveTempToFile(nap,temp):
 def deleteTemp():
     system('cls')
     print('Adat törlése\n')
+    print('Hőmérsékletek: \n')
+    for key,value in homersekletek.items():
+        print(f'{key} - {value}°C')
+
     nap=input('Adja meg a törlendő adat dátumát [Hónap.Nap]: ')
     if nap in homersekletek:
         homersekletek.pop(nap)
@@ -93,6 +97,10 @@ def coldestDay():
 def tempInKelvin():
     system('cls')
     print('Átváltás Kelvinbe\n')
+    
+    print('Hőmérsékletek: \n')
+    for key,value in homersekletek.items():
+        print(f'{key} - {value}°C')
     nap=input('Melyik napnak hőmérsékletét szertné átváltani? [hónap.nap]: ')
     Celsius=homersekletek.get(nap,'Ez a nap nem található meg az adatbázisban!')
     if type(Celsius)==int:
