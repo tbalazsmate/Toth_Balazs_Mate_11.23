@@ -91,7 +91,7 @@ def coldestDay():
     min_value=min(homersekletek.values())
     min_key=[key for key, value in homersekletek.items() if value == min(homersekletek.values())]
     min_days=', '.join(min_key)
-    print(f'A legmelegebb nap/napok: {min_days}. \n E napi átlaghőmérséklet: {min_value}')
+    print(f'A legmelegebb nap/napok: {min_days}. \nE napi átlaghőmérséklet: {min_value}')
     input('Tovább...')
 
 def tempInKelvin():
