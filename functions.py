@@ -31,7 +31,7 @@ def printAllTemps():
     print('Hőmérsékletek: \n')
     for key,value in homersekletek.items():
         print(f'{key} - {value}°C')
-    input('tovább...')
+    input('\ntovább...')
 
 def addNewTemp():
     system('cls')
@@ -40,7 +40,7 @@ def addNewTemp():
     temp=int(input('A nap átlaghőmérséklete: '))
     homersekletek[nap]=temp
     saveTempToFile(nap,temp)
-    input('Adat sikeresen felvéve. Tovább...')
+    input('\nAdat sikeresen felvéve. Tovább...')
 
 def saveTempToFile(nap,temp):
     file=open(filename,'a', encoding='utf-8')
@@ -74,7 +74,7 @@ def averageTemp():
     print('A napok átlaghőmérséklete\n')
     osszeg=sum(homersekletek.values())
     print(f'{len(homersekletek)} napnak átlaghőmérséklete: {round(osszeg/len(homersekletek),2)}°C')
-    input('Tovább...')
+    input('\nTovább...')
     
 def hottestDay():
     system('cls')
@@ -83,7 +83,7 @@ def hottestDay():
     max_key=[key for key, value in homersekletek.items() if value == max(homersekletek.values())]
     max_days=', '.join(max_key)
     print(f'A legmelegebb nap/napok: {max_days}. \n E napi átlaghőmérséklet: {max_value}')
-    input('Tovább...')
+    input('\nTovább...')
     
 def coldestDay():
     system('cls')
@@ -92,7 +92,7 @@ def coldestDay():
     min_key=[key for key, value in homersekletek.items() if value == min(homersekletek.values())]
     min_days=', '.join(min_key)
     print(f'A legmelegebb nap/napok: {min_days}. \nE napi átlaghőmérséklet: {min_value}')
-    input('Tovább...')
+    input('\nTovább...')
 
 def tempInKelvin():
     system('cls')
@@ -101,11 +101,11 @@ def tempInKelvin():
     print('Hőmérsékletek: \n')
     for key,value in homersekletek.items():
         print(f'{key} - {value}°C')
-    nap=input('Melyik napnak hőmérsékletét szertné átváltani? [hónap.nap]: ')
+    nap=input('\nMelyik napnak hőmérsékletét szertné átváltani? [hónap.nap]: ')
     Celsius=homersekletek.get(nap,'Ez a nap nem található meg az adatbázisban!')
     if type(Celsius)==int:
-        print(f'{Celsius}°C az {Celsius+273.15} K')
+        print(f'\n{Celsius}°C az {Celsius+273.15} K')
     else:
-        print('Ez a nap nem található meg az adatbázisban!')
-    input('Tovább...')
+        print('\nEz a nap nem található meg az adatbázisban!')
+    input('\nTovább...')
     
